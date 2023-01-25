@@ -1,4 +1,4 @@
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Config.Commands;
 
 internal sealed class ConfigDeleteCommand : Command
 {
@@ -15,7 +15,8 @@ internal sealed class ConfigDeleteCommand : Command
 
     public async Task HandleAsync(string name)
     {
-        using var configs = new LicenseConfigsRepository();
+        using var ctx = Db.GetContext();
+        var configs = new LicenseConfigsRepository(ctx);
         await configs.DeleteAsync(
             name: name,
             cancellationToken: default

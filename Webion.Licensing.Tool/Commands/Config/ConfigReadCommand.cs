@@ -1,4 +1,4 @@
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Config.Commands;
 
 internal sealed class ConfigReadCommand : Command
 {
@@ -20,12 +20,13 @@ internal sealed class ConfigReadCommand : Command
 
     public async Task HandleAsync(FileInfo input, string config)
     {
-        using var repository = new LicenseConfigsRepository();
+        using var ctx = Db.GetContext();
         using var stream = input.OpenRead();
         using var reader = new StreamReader(stream);
-
+        var configs = new LicenseConfigsRepository(ctx);
         var content = await reader.ReadToEndAsync();
-        var c = await repository.GetAsync(config, default);
+
+        var c = await configs.GetAsync(config, default);
         if (c is null)
             return;
 

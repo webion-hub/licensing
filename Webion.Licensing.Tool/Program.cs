@@ -1,7 +1,21 @@
-﻿using Webion.Licensing.Commands;
-using Webion.Licensing.Storage.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Webion.Licensing.Tool.Commands;
 
-using (var ctx = new LicensingDbContext())
+Db.Configure(options =>
+{
+    var docs = Environment.GetFolderPath(
+        Environment.SpecialFolder.MyDocuments
+    );
+
+    var path = $"{docs}/wl";
+    var conn = $"Filename={path}/db.sqlite";
+
+    Directory.CreateDirectory(path);
+    options.UseSqlite(conn);
+});
+
+
+using (var ctx = Db.GetContext())
 {
     await ctx.Database.EnsureCreatedAsync();
 }

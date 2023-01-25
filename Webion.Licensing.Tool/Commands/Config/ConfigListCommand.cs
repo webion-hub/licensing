@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Humanizer;
 
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Config.Commands;
 
 internal sealed class ConfigListCommand : Command
 {
@@ -19,7 +19,8 @@ internal sealed class ConfigListCommand : Command
 
     public async Task HandleAsync(bool verbose)
     {
-        var configs = new LicenseConfigsRepository();
+        using var ctx = Db.GetContext();
+        var configs = new LicenseConfigsRepository(ctx);
         var saved = await configs.ListAllAsync(default);
 
         var options = new JsonSerializerOptions

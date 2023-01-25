@@ -8,5 +8,5 @@ public sealed class LicenseConfig
     public required string AppCode { get; init; }
     public required TimeSpan Duration { get; init; }
     public required Boolean MatchHardware { get; init; }
-    public ICollection<LicenseProperty> Properties { get; init; } = new List<LicenseProperty>();
+    public ICollection<LicenseProperty> Properties { get; init; } = new List<LicenseProperty>();
 }

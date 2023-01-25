@@ -1,6 +1,6 @@
 using ThinkSharp.Licensing;
 
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Commands;
 
 internal sealed class KeysCommand : Command
 {  

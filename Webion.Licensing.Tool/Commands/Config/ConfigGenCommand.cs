@@ -1,4 +1,4 @@
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Config.Commands;
 
 internal sealed class ConfigGenCommand : Command
 {
@@ -21,8 +21,10 @@ internal sealed class ConfigGenCommand : Command
     public async Task HandleAsync(FileInfo output, string config)
     {
         using var stream = output.OpenWrite();
-        using var repository = new LicenseConfigsRepository();
-        var c = await repository.GetAsync(config, default);
+        using var ctx = Db.GetContext();
+        var configs = new LicenseConfigsRepository(ctx);
+
+        var c = await configs.GetAsync(config, default);
         if (c is null)
             return;
 

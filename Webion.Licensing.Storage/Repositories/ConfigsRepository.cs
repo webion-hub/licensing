@@ -1,8 +1,14 @@
 namespace Webion.Licensing.Repositories;
 
-public sealed class LicenseConfigsRepository : IDisposable
+public sealed class LicenseConfigsRepository
 {
-    private readonly LicensingDbContext _ctx = new();
+    private readonly LicensingDbContext _ctx;
+
+    public LicenseConfigsRepository(LicensingDbContext ctx)
+    {
+        _ctx = ctx;
+    }
+
 
     public async Task<IEnumerable<LicenseConfig>> ListAllAsync(CancellationToken cancellationToken)
     {
@@ -79,11 +85,5 @@ public sealed class LicenseConfigsRepository : IDisposable
 
         _ctx.LicenseConfigs.Remove(existing);
         await _ctx.SaveChangesAsync();
-    }
-
-
-    public void Dispose()
-    {
-        _ctx.Dispose();
     }
 }

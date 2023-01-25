@@ -1,4 +1,4 @@
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Config.Commands;
 
 internal sealed class ConfigUpdateCommand : Command
 {
@@ -38,7 +38,9 @@ internal sealed class ConfigUpdateCommand : Command
 
     public async Task HandleAsync(string name, string privateKey, string publicKey, string appCode, TimeSpan duration, bool useHw, List<string> properties)
     {
-        using var configs = new LicenseConfigsRepository();
+        using var ctx = Db.GetContext();
+        var configs = new LicenseConfigsRepository(ctx);
+
         var config = new LicenseConfig
         {
             Name = name,

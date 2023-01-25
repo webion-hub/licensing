@@ -1,4 +1,6 @@
-namespace Webion.Licensing.Commands;
+using Webion.Licensing.Tool.Config.Commands;
+
+namespace Webion.Licensing.Tool.Commands;
 
 internal sealed class ConfigCommand : Command
 {

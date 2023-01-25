@@ -1,4 +1,4 @@
-namespace Webion.Licensing.Commands;
+namespace Webion.Licensing.Tool.Commands;
 
 internal sealed class ReadCommand : Command
 {
