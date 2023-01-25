@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing.Tool", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing", "Webion.Licensing\Webion.Licensing.csproj", "{7B2C53A5-D9DB-40DB-A768-74D63E5D2389}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing.Api", "Webion.Licensing.Api\Webion.Licensing.Api.csproj", "{841CC755-8FCA-4FC0-93BA-8A60BB9FD592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing.Contracts", "Webion.Licensing.Contracts\Webion.Licensing.Contracts.csproj", "{24B67E77-584E-4A8F-95E3-9053BF54CF6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing.Application", "Webion.Licensing.Application\Webion.Licensing.Application.csproj", "{32F9152A-5676-4343-8B2E-0CEE0258C544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webion.Licensing.Infrastructure", "Webion.Licensing.Infrastructure\Webion.Licensing.Infrastructure.csproj", "{9A28EA0B-8DF3-4AD4-A332-2F134AA55FFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +32,21 @@ Global
 		{7B2C53A5-D9DB-40DB-A768-74D63E5D2389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2C53A5-D9DB-40DB-A768-74D63E5D2389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B2C53A5-D9DB-40DB-A768-74D63E5D2389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841CC755-8FCA-4FC0-93BA-8A60BB9FD592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841CC755-8FCA-4FC0-93BA-8A60BB9FD592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841CC755-8FCA-4FC0-93BA-8A60BB9FD592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841CC755-8FCA-4FC0-93BA-8A60BB9FD592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B67E77-584E-4A8F-95E3-9053BF54CF6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B67E77-584E-4A8F-95E3-9053BF54CF6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B67E77-584E-4A8F-95E3-9053BF54CF6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B67E77-584E-4A8F-95E3-9053BF54CF6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F9152A-5676-4343-8B2E-0CEE0258C544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F9152A-5676-4343-8B2E-0CEE0258C544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F9152A-5676-4343-8B2E-0CEE0258C544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F9152A-5676-4343-8B2E-0CEE0258C544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A28EA0B-8DF3-4AD4-A332-2F134AA55FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A28EA0B-8DF3-4AD4-A332-2F134AA55FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A28EA0B-8DF3-4AD4-A332-2F134AA55FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A28EA0B-8DF3-4AD4-A332-2F134AA55FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

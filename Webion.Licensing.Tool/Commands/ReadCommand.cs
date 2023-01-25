@@ -25,10 +25,6 @@ internal sealed class ReadCommand : Command
     public void Handle(FileInfo file, string publicKey, string appCode)
     {
         using var stream = file.OpenRead();
-        using var reader = new StreamReader(stream);
-        
-        var content = reader.ReadToEnd();
-        var license = License.Deserialize(content, publicKey, appCode);
 
         Console.WriteLine(license);
     }
